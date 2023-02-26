@@ -1,0 +1,4 @@
+#!/usr/bin/python3.8
+
+(lambda res , check : print(["Wrong FLAG" , "Congratulations ! Submit this as the FLAG"][[res[i][0] for i in range(64)] == check]))(((lambda key , func1 , func2 , rotate , inp: [[[func1 , func2][i & 1](ord(sum(key , [])[i % 16]) , ord(inp[i])) , key := rotate(key)] for i in range(64)])([["a" , "b" , "c" , "d"] , ["e" , "f" , "g" , "h"] , ["i" , "j" , "k" , "l"] , ["m" , "n" , "o" , "p"]] , (lambda a , b : ((a | b) & (~a | ~b))) , (lambda a , b : ((a | b) - (a & b))) , (lambda arr : list(map(list , zip(*arr[::-1])))) , (lambda a : ("0" * 64 if len(a) != 64 else a))(input("What is the FLAG ?\n")))) , [50, 42, 39, 35, 49, 17, 90, 1, 90, 39, 87, 0, 40, 51, 50, 20, 86, 33, 94, 30, 58, 91, 25, 48, 43, 46, 7, 27, 25, 93, 4, 56, 29, 54, 44, 5, 82, 53, 91, 27, 54, 90, 21, 67, 15, 95, 83, 3, 6, 54, 26, 64, 85, 53, 6, 3, 89, 91, 8, 0, 10, 11, 67, 16])
+

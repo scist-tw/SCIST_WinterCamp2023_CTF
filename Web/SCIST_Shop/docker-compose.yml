@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  scist_shop:
+    container_name: scist_shop
+    image: scist_shop
+    build: .
+    ports:
+      - 10226:80

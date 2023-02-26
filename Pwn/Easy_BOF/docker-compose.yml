@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  easy_bof:
+    build: ./
+    volumes:
+      - ./share:/home/chal:ro
+      - ./xinetd:/etc/xinetd.d/chal:ro
+    ports:
+      - "13373:10001"
